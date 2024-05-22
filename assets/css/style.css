@@ -3,6 +3,7 @@
     padding:0px;
     box-sizing: border-box;
 }
+body{overflow-x: hidden;}
 .backgroundhead{
     background-color: rgb(255, 255, 255);
     border-radius: 0px 0px 20px 20px;
@@ -36,6 +37,7 @@ h4,h5{color: rgb(70, 64, 64);}
         right:0px;
         z-index:2;
 }
+
 .navbar .dropdown:hover .dropdown-menu{display:block;}
 
 .carousel .carousel-caption{
@@ -44,20 +46,14 @@ h4,h5{color: rgb(70, 64, 64);}
     text-align: left;
 
 }
-/* .carousel .carousel-caption .col-md-5{
-top:150px !important; 
-} */
+
 .carousel-indicators [data-bs-target] {
     width: 10px;
     height: 10px;
     border-radius: 50% !important;
     
 }
-/* .carousel-control-next-icon, .carousel-control-prev-icon { 
-    height: 24px;width: 24px;
-    border: 2px solid white;
-    border-radius: 50%; 
-} */
+
 #carouselExampleCaptions .col-md-5{
     -webkit-animation: mover 1s infinite  alternate;
     animation: mover 1.6s infinite  alternate;
@@ -67,7 +63,7 @@ top:150px !important;
     100% { transform: translateY(-25px); }
 }
 
-@media only all and (max-width:991px){
+@media only all and (max-width:1200px){
     .tophead{
         display:none;
     }
@@ -75,20 +71,42 @@ top:150px !important;
 @media only all and (max-width:991px){
     .navbar{
         position: absolute;
-            top:0px;
-            left:0px; 
-            right:0px;
-            z-index:1;
-}}
+        top:0px;
+        left:0px; 
+        right:0px;
+        z-index:1;
+        border-radius: 5px;
+        --bs-navbar-color: transparent;
+        --bs-navbar-hover-color:transparent;
+        --bs-navbar-disabled-color:transparent;
+        --bs-navbar-active-color: transparent;
+        --bs-navbar-brand-color:transparent;
+        --bs-navbar-brand-hover-color:transparent;
+}
+    .nav-item{
+        background-color: #157347;
+        padding-left: 10px;
+        padding-bottom: 6px;
+    }
+    .navbar-toggler-icon{
+        background-image:url(../img/toggler.png);
+        border-radius: 3px;
+    }
+    .navbar-toggler-icon:active{
+        box-shadow: #fff 0px 0px 9px 3px;
+        transition: 0.5s;
+    }
+}
 marquee{box-shadow: 0px 0px 6px 0.3px rgb(201, 197, 197);}
 
-.about img{box-shadow:0px 0px 6px 0.3px rgb(201, 197, 197);
-border-radius: 10px; }
+.about img{
+    box-shadow:0px 0px 6px 0.3px rgb(201, 197, 197);
+    border-radius: 10px; }
 
 #carouselExampleCaptions button{border-radius: 20px;}
 .navbar li .btn{border-radius: 20px;}
 
-.about .col-md-5 {
+.about .col-md-5{
     padding-top: 10px;
     background-color: rgb(215, 245, 223);
     border-radius: 15px;
@@ -161,7 +179,6 @@ border-radius: 10px; }
 .client .container1{
     box-shadow: 0px 3px 0px 0px rgb(83, 150, 83); 
     font-size: medium;
-    /* background-color: rgb(250, 252, 250); */
     border-radius: 15px;
     transition:all 0.5s;
 }
@@ -174,23 +191,17 @@ border-radius: 10px; }
     border-radius: 15px;
     box-shadow: 0px 3px 0px 0px rgb(80, 153, 80); 
     transition:all 0.5s; }
-/* .needhelp .col-md-5 .content:hover{
-    transform: translateY(-6px);
-    box-shadow: 0px 3px 0px 0px rgb(60, 141, 60); } */
-.needhelp .col-md-3:hover{
-    font-size: 20px;}
-.needhelp .col-md-7{
+
+.needhelp .col-md-7 .content{
     border-top: 3px solid rgb(80, 153, 80);
-    padding-left: 3px; 
     padding-top: 5px;
     background-color: rgb(245, 250, 246);
     border-radius: 15px;
     box-shadow: 0px 3px 0px 0px rgb(80, 153, 80); 
     transition:all 0.5s; }
-/* .needhelp .col-md-7:hover{
-    transform: translateY(-6px);
-    box-shadow: 0px 3px 0px 0px rgb(60, 141, 60); */
-/* } */
+
+.needhelp .col-md-3:hover{
+        font-size: 20px;}
 .capital {background-color: rgb(250, 246, 246);}
 .capital #row2{
     box-shadow: 0px 3px 0px 0px rgb(101, 179, 101); 
@@ -237,29 +248,30 @@ border-radius: 10px; }
 .banner .title{
     position: absolute;
     top: 50%;
-    left:620px;
+    left: 50%;
+    margin-left: -70px;
 }
 
 
 
-.whois2 .col-md-4 img{
+.whois2 .col-lg-4 img{
     transition:all 0.5s;
     }
-.whois2 .col-md-4 img{
+.whois2 .col-lg-4 img{
     border-radius: 10px;
     box-shadow: 0px 0px 5px 2px rgb(227, 230, 227);}
-.whois2 .col-md-4 img:hover{
+.whois2 .col-lg-4 img:hover{
     transform: translateY(-6px);
     box-shadow: 0px 3px 0px 0px rgb(60, 141, 60);}
 
-.whois2 .col-md-8 .content{
+.whois2 .col-lg-8 .content{
     line-height: 24px;
     font-size: 14px;
     background-color: rgb(245, 247, 245);
     border-radius: 15px;
     transition:all 0.5s;
     box-shadow: 0px 0px 5px 2px rgb(227, 230, 227);}
-.whois2 .col-md-8 .content:hover{
+.whois2 .col-lg-8 .content:hover{
     transform: translateY(-6px);
     box-shadow: 0px 3px 0px 0px rgb(60, 141, 60);
 }
@@ -281,7 +293,6 @@ border-radius: 10px; }
 .product .btn{
     background-color: rgb(58, 172, 58);
     color: white;
-  
 }
 .product .btn:hover{
     background-color: green;
