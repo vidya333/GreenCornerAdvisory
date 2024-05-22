@@ -3,7 +3,9 @@
     padding:0px;
     box-sizing: border-box;
 }
-body{overflow-x: hidden;}
+body{
+    overflow-x: hidden;
+    }
 .backgroundhead{
     background-color: rgb(255, 255, 255);
     border-radius: 0px 0px 20px 20px;
@@ -362,3 +364,12 @@ marquee{box-shadow: 0px 0px 6px 0.3px rgb(201, 197, 197);}
     color: rgb(39, 37, 37);
 }
 .baticon .fafa{float: right;color: rgb(146, 143, 143);padding-top: 3px;}
+
+
+.offer{
+    overflow-x: hidden;
+    overflow-y: hidden;}
+.whois{
+    overflow-x: hidden;
+    overflow-y: hidden;;
+}
